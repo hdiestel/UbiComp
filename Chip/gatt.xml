@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+    <service uuid="1800">
+      <description>Generic Access Profile</description>
+
+      <characteristic uuid="2a00">
+        <properties read="true" const="true" />
+        <value>Room Accessory</value>
+      </characteristic>
+
+      <characteristic uuid="2a01">
+        <properties read="true" const="true" />
+        <value type="hex">4142</value>
+      </characteristic>
+    </service>
+    
+    <service uuid="0bd51666-e7cb-469b-8e4d-2742f1ba77cc" advertise="true">
+        <description>Room service</description>
+        
+        <characteristic uuid="33e429f0-d450-11e3-9c1a-0800200c9a66" id="xd_room_nr">
+            <description>Room Number</description>
+            <properties write="false" read="true" indicate="true" const="true"/>
+            <value type="utf-8">ABCD</value>
+        </characteristic>
+		
+		<characteristic uuid="33e429f1-d450-11e3-9c1a-0800200c9a66" id="xd_room_na">
+            <description>Room Name</description>
+            <properties write="false" read="true" indicate="true" />
+            <value variable_length="true" length="20" type="utf-8">Ubicomp Lab</value>
+        </characteristic>
+    </service>
+    
+</configuration>
