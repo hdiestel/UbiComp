@@ -1,2 +1,0 @@
-xd_room_nr 8
-xd_room_na 12
